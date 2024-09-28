@@ -8,7 +8,7 @@ Concurrency allows different parts of progam to make progress independently,
 often leading to better resource utilization and improved performance.
 
 <div align="center">
-  <img src="https://github.com/vipuldhurve/Code/blob/main/assets/process%20vs%20thread.jpg" alt="Image" style="display:block; width:60%; height:auto; margin:auto;">
+  <img src="https://github.com/vipuldhurve/java-multithreading/blob/main/assets/process%20vs%20thread.jpg" alt="Image" style="display:block; width:60%; height:auto; margin:auto;">
   <p style="position:absolute; bottom:0; text-align:center; width:100%;">Process v/s Thread</p>
 </div>
 
@@ -68,6 +68,6 @@ Spending more time in management(context switches) than real productive work
 - (5. Time until aggregating thread runs)
 - (6. Aggregation of the subresults into a single artefact)
 <div align="center">
-  <img src="https://github.com/vipuldhurve/Code/blob/main/assets/single%20threaded%20vs%20multithreaded%20latency.png" alt="Image" style="display:block; margin:auto;">
+  <img src="https://github.com/vipuldhurve/java-multithreading/blob/main/assets/single%20threaded%20vs%20multithreaded%20latency.png" alt="Image" style="display:block; margin:auto;">
   <p style="position:absolute; bottom:0; text-align:center; width:100%;">This diagram illustrates the single-threaded app latency vs multi-threaded app latency.</p>
 </div>
