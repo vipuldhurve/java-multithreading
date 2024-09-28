@@ -1,7 +1,7 @@
 # Multi Threading
 Why we need multi threading?
-- Performance(Parellelism) : We can create an illusion of multile tasks executing in parallel uding just a single core.
-- Responsiveness(Concurrency) : Applications with user interface like watching movie & increasing volume simultaneously.
+- <b><i>Performance(Parellelism)</i></b> : We can create an illusion of multiple tasks executing in parallel using just a single core.
+- <b><i>Responsiveness(Concurrency)</i></b>  : Applications with user interface like watching movie & increasing volume simultaneously.
 
 ### Concurrency - Multitasking
 Concurrency allows different parts of progam to make progress independently,
