@@ -14,10 +14,10 @@ public class MyBlockingQueueImpl<E> {
         this.max = size;
     }
 
-//   Using conditions
+    //   Using conditions
     ReentrantLock lock = new ReentrantLock();
-    private Condition notEmpty = lock.newCondition();
-    private Condition notFull = lock.newCondition();
+    private Condition isNotEmpty = lock.newCondition();
+    private Condition isNotFull = lock.newCondition();
 
 
     public void put(E e) {
@@ -25,12 +25,12 @@ public class MyBlockingQueueImpl<E> {
         try {
             while (queue.size() == max) {
 //                block the producer
-                notFull.await();
+                isNotFull.await();
             }
             queue.add(e);
 //            Process it and signal consumer
             System.out.println("Producer: " + this);
-            notEmpty.signalAll();
+            isNotEmpty.signalAll();
         } catch (InterruptedException ex) {
             throw new RuntimeException(ex);
         } finally {
@@ -43,12 +43,12 @@ public class MyBlockingQueueImpl<E> {
         try {
             while (queue.size() == 0) {
 //                block the consumer
-                notEmpty.await();
+                isNotEmpty.await();
             }
             E item = queue.remove();
 //            Process it and signal producer
             System.out.println("Consumer: " + item);
-            notFull.signalAll();
+            isNotFull.signalAll();
             return item;
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
